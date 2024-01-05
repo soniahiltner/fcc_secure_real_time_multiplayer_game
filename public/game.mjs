@@ -46,7 +46,7 @@ socket.on('collectible', (newCollectible) => {
 // Receiving opponents
 socket.on('opponents', (opponents) => {
   opponents.forEach(opponent => {
-    currentOpponents.push(new player(opponent))
+    currentOpponents.push(new Player(opponent))
   })
   //Calculate rank
   currentRanking = player.calculateRank([player, ...currentOpponents])
